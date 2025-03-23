@@ -46,7 +46,7 @@ app.get("/api/v1/webistes",authMiddleware, async (req,res) => {
 
     const websites = await prismaClient.website.findMany({
         where : {
-            id:userId,
+            userId,
             disabled : false
         },
         include : {
@@ -78,4 +78,4 @@ app.delete("/api/v1/website",authMiddleware, async (req,res) => {
 
 
 
-app.listen(300);
+app.listen(8080);
