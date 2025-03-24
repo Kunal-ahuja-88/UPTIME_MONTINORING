@@ -5,14 +5,14 @@ import { useEffect,useState } from "react";
 import { API_BACKEND_URL } from "@/config";
 
 interface Website {
-    id:string,
-    url:string,
-    ticks : {
-        id:string,
-        createdAt:string,
-        latency:number,
-        status:string
-    }
+    id: string;
+    url: string;
+    ticks: {
+        id: string;
+        createdAt: string;
+        status: string;
+        latency: number;
+    }[];
 }
 
 export function useWebsites() {
